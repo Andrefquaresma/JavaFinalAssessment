@@ -23,4 +23,12 @@ public class CustomerService {
     public CustomerModel getCustomerById(int id) {
         return repository.findById(id);
     }
+
+    public void saveOrUpdate(CustomerModel customer) {
+        repository.save(customer);
+    }
+
+    public void deleteCustomer(int id) {
+        repository.delete(getCustomerById(id));
+    }
 }
