@@ -31,4 +31,8 @@ public class CustomerService {
     public void deleteCustomer(int id) {
         repository.delete(getCustomerById(id));
     }
+
+    public Customer(String email) {
+
+    }
 }
