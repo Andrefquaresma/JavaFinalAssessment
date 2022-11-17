@@ -1,19 +1,18 @@
-package model;
+package finalAssessment.finalAssessment.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Table;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
+
+
 
 @Entity
-@Table(name ="quaresmacatarinatable")
-public class Customer {
+public class CustomerModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private int id;
     @Column
     private String firstName;
@@ -24,16 +23,20 @@ public class Customer {
     @Column
     private String email;
 
-    public Customer() {
+
+    //Empty constructor for Springboot
+    public CustomerModel() {
     }
 
-    public Customer(int id, String firstName, String lastName, String phoneNumber, String email) {
+
+    public CustomerModel(int id, String firstName, String lastName, String phoneNumber, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
+
 
     public int getId() {
         return id;

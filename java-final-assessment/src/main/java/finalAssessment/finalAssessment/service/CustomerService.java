@@ -1,26 +1,26 @@
-package service;
+package finalAssessment.finalAssessment.service;
 
 import java.util.ArrayList;
 import java.util.List;
-import model.Customer;
+import finalAssessment.finalAssessment.model.CustomerModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.CustomerSpringDataJpaRepository;
+import finalAssessment.finalAssessment.repository.CustomerSpringDataJpaRepository;
 
 @Service
-public class ServiceCustomer {
+public class CustomerService {
 
     @Autowired
     CustomerSpringDataJpaRepository repository;
 
 
-    public List<Customer> getAllCustomers() {
-        List<Customer> allCustomers = new ArrayList<>();
+    public List<CustomerModel> getAllCustomers() {
+        List<CustomerModel> allCustomers = new ArrayList<>();
         repository.findAll().forEach(customer -> allCustomers.add(customer));
         return allCustomers;
     }
 
-    public Customer getCustomerById(int id) {
+    public CustomerModel getCustomerById(int id) {
         return repository.findById(id);
     }
 }
