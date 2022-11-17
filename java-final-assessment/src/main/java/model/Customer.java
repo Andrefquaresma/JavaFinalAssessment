@@ -3,21 +3,25 @@ package model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
 import org.springframework.data.annotation.Id;
 
-@Entity (name ="quaresmaCatarinaTable")
+@Entity
+@Table(name ="quaresmacatarinatable")
 public class Customer {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int id;
-    @Column(name="First_Name")
+    @Column
     private String firstName;
-    @Column(name = "Last_Name")
+    @Column
     private String lastName;
-    @Column(name = "Phone_Number")
+    @Column
     private String phoneNumber;
-    @Column(name = "Email")
+    @Column
     private String email;
 
     public Customer() {
