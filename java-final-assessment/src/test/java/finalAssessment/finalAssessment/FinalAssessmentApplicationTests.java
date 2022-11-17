@@ -1,10 +1,10 @@
-package Final.Assessment.javafinalassessment;
+package finalAssessment.finalAssessment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JavaFinalAssessmentApplicationTests {
+class FinalAssessmentApplicationTests {
 
 	@Test
 	void contextLoads() {
